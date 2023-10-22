@@ -19,7 +19,7 @@ public class Judgement {
             checkNumber(playerNumber.get(i), computerNumber, i, hints);
         }
 
-        Collections.sort(hints);
+        Collections.sort(hints, (hint1, hint2) -> hint1.ordinal() - hint2.ordinal());
 
         if (hints.isEmpty()) {
             hints.add(NOTHING);

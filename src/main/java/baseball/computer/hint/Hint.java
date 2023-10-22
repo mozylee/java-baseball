@@ -18,4 +18,12 @@ public enum Hint {
         return name;
     }
 
+    public String getPrintableString(int count) {
+        if (this == NOTHING) {
+            return this.name;
+        }
+
+        return String.format("%d%s", count, this.name);
+    }
+
 }
